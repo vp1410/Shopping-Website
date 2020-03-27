@@ -18,7 +18,7 @@ class SignUp extends React.Component{
 handleSubmit = async event=>{
     event.preventDefault();
     const {displayName,email,password,confirmPassword}=this.state;
-    if(password != confirmPassword){
+    if(password !== confirmPassword){
         alert('Passwords dont match');
         return;
     }
@@ -47,32 +47,32 @@ handleChange = event =>{
                 <h2 className='title'>I do not have an account</h2>
                 <span>Sign up with your credentials</span>
                 <form className="sign-up-form" onSubmit={this.handleSubmit}>
-                    <FormInput 
-                        type ='text' 
+                    <FormInput
+                        type ='text'
                         name='displayName'
                         value={displayName}
                         onChange={this.handleChange}
                         label='Display Name'
                         required
                     />
-                    <FormInput 
-                        type ='email' 
+                    <FormInput
+                        type ='email'
                         name='email'
                         value={email}
                         onChange={this.handleChange}
                         label='Email'
                         required
                     />
-                    <FormInput 
-                        type ='password' 
+                    <FormInput
+                        type ='password'
                         name='password'
                         value={password}
                         onChange={this.handleChange}
                         label='Password'
                         required
                     />
-                    <FormInput 
-                        type ='password' 
+                    <FormInput
+                        type ='password'
                         name='confirmPassword'
                         value={confirmPassword}
                         onChange={this.handleChange}
